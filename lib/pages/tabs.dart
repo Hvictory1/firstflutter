@@ -26,18 +26,21 @@ class _TabsState extends State<Tabs> {
         height: 60,
         width: 60,
         decoration: BoxDecoration(
-          color:Colors.yellow,
+          color: Colors.yellow,
           borderRadius: BorderRadius.circular(30),
         ),
         padding: EdgeInsets.all(3),
-        margin: EdgeInsets.only(top:5),
+        margin: EdgeInsets.only(top: 5),
         child: FloatingActionButton(
-            backgroundColor: _initIndex == 1 ? Color.fromARGB(115, 200, 41, 41) : Color.fromARGB(221, 61, 145, 83),
+            backgroundColor: _initIndex == 1
+                ? Color.fromARGB(115, 200, 41, 41)
+                : Color.fromARGB(221, 61, 145, 83),
             onPressed: () {
               setState(() {
                 _initIndex = 1;
               });
-            }, child: const Icon(Icons.add)),
+            },
+            child: const Icon(Icons.add)),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(
@@ -53,6 +56,9 @@ class _TabsState extends State<Tabs> {
           BottomNavigationBarItem(icon: Icon(Icons.dangerous), label: '动态'),
           BottomNavigationBarItem(icon: Icon(Icons.woman), label: '我的'),
         ],
+      ),
+      drawer: Drawer(
+        child: Column(children: const [SizedBox(height: 30,) ,ListTile(title: Text('我是title'))]),
       ),
     );
   }
