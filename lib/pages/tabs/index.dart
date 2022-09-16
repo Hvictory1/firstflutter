@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Index extends StatefulWidget {
-  const Index({super.key});
+const Index({Key? key}) : super(key: key);
 
   @override
   State<Index> createState() => _IndexState();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Cartgory extends StatefulWidget {
-  const Cartgory({super.key});
+const Cartgory({Key? key}) : super(key: key);
 
   @override
   State<Cartgory> createState() => _CartgoryState();
