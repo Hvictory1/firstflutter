@@ -20,7 +20,9 @@ class _TabsState extends State<Tabs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('我是标题')),
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: const Text('我是标题')),
       body: _list[_initIndex],
       floatingActionButton: Container(
         height: 60,
@@ -52,7 +54,7 @@ class _TabsState extends State<Tabs> {
           });
         },
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: '首页1'),
           BottomNavigationBarItem(icon: Icon(Icons.dangerous), label: '动态'),
           BottomNavigationBarItem(icon: Icon(Icons.woman), label: '我的'),
         ],
