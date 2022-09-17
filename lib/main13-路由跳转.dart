@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import './pages/news.dart';
 
 void main() {
-  // ignore: prefer_const_constructors
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     title: 'donghua',
-    home: const MyApp(),
+    home: MyApp(),
   ));
 }
 
