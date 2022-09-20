@@ -37,7 +37,7 @@ class _DiologState extends State<Diolog> {
         context: context,
         builder: (context) {
           return SimpleDialog(
-            title: Text('选择语言'),
+            title: Text('选择语言1'),
             children: [
               SimpleDialogOption(
                 onPressed: () {
