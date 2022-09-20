@@ -27,13 +27,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.blue),
-      initialRoute: "/",
-      onGenerateRoute: onGenerateRoute,
-    );
+        theme: ThemeData(primarySwatch: Colors.blue),
+        home: Scaffold(
+          appBar: AppBar(title: const Text('Title')),
+          body: PageView(scrollDirection: Axis.vertical, children: const [
+            Center(
+              child: Text('第一屏'),
+            ),
+            Center(
+              child: Text('第一屏2'),
+            ),
+            Center(
+              child: Text('第一屏3'),
+            ),
+            Center(
+              child: Text('第一屏4'),
+            ),
+          ]),
+        ));
   }
 }

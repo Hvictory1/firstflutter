@@ -13,8 +13,8 @@ class _DiologState extends State<Diolog> {
         context: context,
         builder: (context) {
           return AlertDialog(
-              title: Text("alertDiolog"),
-              content: Text("我是内容"),
+              title: const Text("alertDiolog"),
+              content: const Text("我是内容"),
               actions: [
                 TextButton(
                     onPressed: () {
@@ -37,13 +37,13 @@ class _DiologState extends State<Diolog> {
         context: context,
         builder: (context) {
           return SimpleDialog(
-            title: Text('选择语言1'),
+            title: const Text('选择语言1'),
             children: [
               SimpleDialogOption(
                 onPressed: () {
                   Navigator.of(context).pop("汉语");
                 },
-                child: Text('中文'),
+                child: const Text('中文'),
               ),
               SimpleDialogOption(
                 onPressed: () {
@@ -58,9 +58,11 @@ class _DiologState extends State<Diolog> {
   }
 
   void _modelBottomSheet() {
-    showModalBottomSheet(context: context, builder: (context) {
-      return Text("底部弹出框");
-    });
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Text("底部弹出框");
+        });
   }
 
   @override
@@ -83,7 +85,8 @@ class _DiologState extends State<Diolog> {
           const SizedBox(
             height: 20,
           ),
-          ElevatedButton(onPressed: _modelBottomSheet, child: Text('modelbottomsheet')),
+          ElevatedButton(
+              onPressed: _modelBottomSheet, child: Text('modelbottomsheet')),
         ],
       )),
     );
